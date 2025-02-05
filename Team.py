@@ -1,10 +1,13 @@
-n = int(input("Enter the number of problems: "))
-problems_solved = 0
+n = int(input())
 
-for i in range(n):
+solve_count = 0
+for _ in range(n):
+    
+    p, v, t = map(int, input().split())
+    
 
-    friends = list(map(int, input(f"Enter the views for problem {i+1} (Petya Vasya Tonya): ").split()))
+    if p + v + t >= 2:
+        solve_count += 1
+        
+print(solve_count)
 
-    if sum(friends) >= 2:
-        problems_solved += 1
-print( problems_solved)
