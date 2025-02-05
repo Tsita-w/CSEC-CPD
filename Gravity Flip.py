@@ -1,7 +1,7 @@
 
-n = int(input("Enter the number of columns: "))
+n = int(input())
 
-cubes = list(map(int, input("Enter the number of cubes in each column: ").split()))
+cubes = list(map(int, input().split()))
 
 cubes.sort()
 
