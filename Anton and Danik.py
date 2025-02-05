@@ -1,14 +1,13 @@
-n, h = map(int, input().split())  
-a = list(map(int, input().split()))  
+n = int(input())  
+s = input() 
 
+anton_wins = s.count('A')
+danik_wins = s.count('D')
 
-total_width = 0
-
-for height in a:
-    if height > h:
-        total_width += 2  
-    else:
-        total_width += 1  
-
-print(total_width)
+if anton_wins > danik_wins:
+    print("Anton")
+elif danik_wins > anton_wins:
+    print("Danik")
+else:
+    print("Friendship")
 
