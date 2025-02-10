@@ -1,0 +1,12 @@
+def last_position(s, t):
+    pos = 0
+    for move in t:
+        if s[pos] == move:
+            pos += 1
+        
+    return pos + 1
+            
+s = input()
+t = input()
+
+print(last_position(s, t))
