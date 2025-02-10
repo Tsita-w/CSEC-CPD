@@ -1,0 +1,24 @@
+def shoot_birds():
+    n = int(input())  
+    birds = list(map(int, input().split())) 
+    m = int(input()) 
+    
+    for _ in range(m):
+        xi, yi = map(int, input().split())  
+        xi -= 1 
+        
+        left_birds = yi - 1  
+        right_birds = birds[xi] - yi  
+
+        if xi > 0:  
+            birds[xi - 1] += left_birds  
+        if xi < n - 1:  
+            birds[xi + 1] += right_birds  
+        
+        birds[xi] = 0
+
+    for count in birds:
+        print(count)
+
+
+shoot_birds()
